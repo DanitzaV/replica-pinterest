@@ -1,4 +1,6 @@
 .container {
+  margin-top: 2em;
+    padding-left: 2.2em;
   column-count: 4;
     column-gap: 1em;
 }
@@ -6,4 +8,7 @@
   display: inline-block;
   margin: 0 0 1em;
   width: 100%;
+}
+.items img {
+  border-radius: 3em;
 }
