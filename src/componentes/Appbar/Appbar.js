@@ -11,6 +11,7 @@ import Menu from '@material-ui/core/Menu';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
+import './../../App.css';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
@@ -18,6 +19,8 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import grey from '@material-ui/core/colors/grey';
 import logoIcon from '../../img/icon-pint.png';
+import { Button } from '@material-ui/core';
+
 
 const styles = theme => ({
   root: {
@@ -183,26 +186,30 @@ class PrimarySearchAppBar extends React.Component {
                   input: classes.inputInput,
                 }}
               />
+            
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-              <IconButton color="inherit">
-                <Badge className={classes.margin} badgeContent={4} color="secondary">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton color="inherit">
-                <Badge className={classes.margin} badgeContent={17} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
+              <Button className="tipografiaBtn">Inicio</Button>
+              <Button className="tipografiaBtn">Siguiendo</Button>
               <IconButton
                 aria-owns={isMenuOpen ? 'material-appbar' : null}
                 aria-haspopup="true"
                 onClick={this.handleProfileMenuOpen}
                 color="inherit"
               >
-                <AccountCircle />
+                <AccountCircle style={{ fontSize: 40 }}/>
+                <Typography className="tipografiaBtn">Usuario</Typography>
+              </IconButton>
+              <IconButton color="inherit">
+                <Badge className={classes.margin}  color="secondary">
+                  <MailIcon style={{ fontSize: 40 }}/>
+                </Badge>
+              </IconButton>
+              <IconButton color="inherit">
+                <Badge className={classes.margin}  color="secondary">
+                  <NotificationsIcon style={{ fontSize: 40 }}/>
+                </Badge>
               </IconButton>
             </div>
             <div className={classes.sectionMobile}>

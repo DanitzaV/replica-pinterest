@@ -11,7 +11,9 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-infinite-scroller": "^1.2.1",
+    "react-masonry-component": "^6.2.1",
     "react-onscroll": "^1.0.4",
+    "react-responsive-masonry": "^2.0.0",
     "react-scripts": "2.0.4",
     "react-test-renderer": "^16.5.2"
   },

@@ -1,14 +1,44 @@
-.container {
-  margin-top: 2em;
-    padding-left: 2.2em;
-  column-count: 4;
-    column-gap: 1em;
+@import url('https://fonts.googleapis.com/css?family=K2D:500');
+* {
+  box-sizing: border-box;
 }
+
+.grid {
+
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+ 
+}
+
 .items{
-  display: inline-block;
-  margin: 0 0 1em;
-  width: 100%;
+
+
+  
 }
 .items img {
   border-radius: 3em;
+}
+.tipografiaBtn{
+  font-family: 'K2D', sans-serif !important;
+  font-size: 17px !important;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    column-count: 4;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .container {
+    column-count: 3;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .container {
+    column-count: 2;
+  }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import CircularProgress from './../CircularProgress/CircularProgress';
 import qwest from 'qwest';
 import PropTypes from 'prop-types';
@@ -9,22 +10,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Modal from './../../Modal/Modal';
 
-function rand() {
-    return Math.round(Math.random() * 20) - 10;
-  }
- 
-  
-  
-  function getModalStyle() {
-    const top = 50 + rand();
-    const left = 50 + rand();
-  
-    return {
-      top: `${top}%`,
-      left: `${left}%`,
-      transform: `translate(-${top}%, -${left}%)`,
-    };
-  }
   const styles = theme => ({
     paper: {
       position: 'absolute',
@@ -77,7 +62,7 @@ class Ejemplo extends Component {
                 }
             });
     }
-
+   
     datos(e){
         console.log(e)
         this.setState({item: {img: e.urls.small}})
@@ -103,25 +88,31 @@ class Ejemplo extends Component {
                 loadMore={this.loadItems.bind(this)}
                 hasMore={this.state.hasMoreItems}
                 loader={loader}>
-
-               
-                        <div className=" container">
-                    {
-                        this.state.tracks.map((track, i) => {
-            return(
-                <div className=" items" key={i}>
-                        <img onClick={() => {
-                            this.datos(track)
+                <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <Masonry>
+          {this.state.tracks.map((e, i) => (
+            <div style={{ padding: "7px" }}>
+              <img
+                key={i}
+                src={e.urls.small}
+                onClick={() => {
+                            this.datos(e)
                             this.handleOpen()
-                        }
-                         } src={track.urls.small} alt="img" />
-                       
-                </div>
-                
-            );
-        })}
-            <Modal data={this.state.item} img={this.state.item.img} close={this.handleClose} open={this.state.open} />
-                </div>
+                        }}
+                style={{
+                  width: "100%",
+                  display: "block",
+                  marginBottom: "5px",
+                  borderRadius: "35px"
+                }}
+                alt=""
+              />
+            </div>
+          ))}
+        </Masonry>
+        <Modal data={this.state.item} img={this.state.item.img} close={this.handleClose} open={this.state.open} />
+      </ResponsiveMasonry>
+            
                
             </InfiniteScroll>
         );
