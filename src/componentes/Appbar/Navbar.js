@@ -35,7 +35,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar light expand="md" className="navbar-pin" style={{ padding: "17px", borderBottom: "1px solid #ded2d2", marginBottom: "9px", }}>
+        <Navbar light expand="md" className="navbar-pin" style={{ padding: "9px", borderBottom: "1px solid #ded2d2", marginBottom: "9px", }}>
           <img src={imgpin} style={{ width: "38px", marginLeft: "19px" }} />
           <Input style={{ width: "51%", marginLeft: "22px", backgroundColor: "#EFEFEF" }} />
           <NavbarToggler onClick={this.toggle} />
