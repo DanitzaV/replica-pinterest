@@ -1,0 +1,104 @@
+.modal-open .modal {
+    background-color: #EEEEEE;
+}
+.modal-content {
+    border: none !important;
+    border-radius: 15px !important;
+
+}
+.modal-img {
+    
+    
+}
+.icon-back{
+    position: absolute;
+    display: flex;
+    right: 701px;
+    
+}
+.icon-back .iconarrow {
+    font-size: 2em;
+}
+.img-content{
+    display: flex;
+    justify-content: space-between;
+}
+.img-props{
+    border-radius: 5px;
+}
+.p-inicio {
+    font-weight: 900;
+    margin: 3px;
+    margin-left: 13px;
+}
+.btn-icon{
+    background-color: white !important;
+    color: gray !important;
+    border: none    !important;
+}
+.body-description{
+    margin-left: 10px;
+    padding-right: 22px;
+    font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", arial, sans-serif !important;
+    color: #211922;
+    font-size: 22px;
+    font-weight: 900;
+    
+}
+.btn-icon:hover {
+    border: none !important;
+    background-color: rgba(128, 128, 128, 0.671) !important;
+    color: white !important; 
+}
+.btn-enviar{
+    background-color: #E2E2E2 !important;
+    border: none !important;
+    color: #333232 !important;
+    font-weight: 900 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto Oxygen-Sans", Ubuntu, Cantarell, "“Fira Sans”", "“Droid Sans”", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.color-btns{
+    background-color: #E2E2E2 !important;
+    border: none !important;
+    color: #696464 !important;
+    padding: 7px !important;
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    
+}
+.btn-enviar{
+    margin-right: 15px;
+   
+}
+.color-b{
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.btns-flex{
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+}
+.btn-danger {
+    font-weight: 900 !important;
+    font-size: 16px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+}
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 680px !important;
+    margin: 1.75rem auto;
+}
+.img-props{
+    width: 62%;
+}
+}
+

@@ -9,6 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 // import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
 import Modal from './../../Modal/Modal';
+import ImgModal from '../../Modal/ModalBoot';
 
   const styles = theme => ({
     paper: {
@@ -34,8 +35,8 @@ class Ejemplo extends Component {
             item: [],
         };
     }
-      
-
+    
+ 
     loadItems() {
         var self = this;
 
@@ -65,7 +66,7 @@ class Ejemplo extends Component {
    
     datos(e){
         console.log(e)
-        this.setState({item: {img: e.urls.small}})
+        this.setState({item: {img: e.urls.small,description: e.description,imguser: e.user.profile_image.small, user: e.user.name,web:e.links.html}})
     
     
     }
@@ -110,7 +111,8 @@ class Ejemplo extends Component {
             </div>
           ))}
         </Masonry>
-        <Modal data={this.state.item} img={this.state.item.img} close={this.handleClose} open={this.state.open} />
+        <ImgModal web={this.state.item.web} username={this.state.item.user} imguser={this.state.item.imguser} description={this.state.item.description} data={this.state.item} img={this.state.item.img} close={this.handleClose} open={this.state.open}></ImgModal>
+        
       </ResponsiveMasonry>
             
                
@@ -122,6 +124,7 @@ class Ejemplo extends Component {
 Ejemplo.propTypes = {
     classes: PropTypes.object.isRequired,
   };
+  {/* <Modal data={this.state.item} img={this.state.item.img} close={this.handleClose} open={this.state.open} /> */}
 //   const SimpleModalWrapped = ;
 
 export default withStyles(styles)(Ejemplo);
