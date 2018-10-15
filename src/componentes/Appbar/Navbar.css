@@ -1,0 +1,15 @@
+.btn-navbar{
+    margin-right: 13px !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: #979797 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto Oxygen-Sans", Ubuntu, Cantarell, "“Fira Sans”", "“Droid Sans”", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+}
+.icon-navbar {
+    font-size: 33px !important;
+}
+.navbar-pin{
+    background-color: transparent !important;
+}
