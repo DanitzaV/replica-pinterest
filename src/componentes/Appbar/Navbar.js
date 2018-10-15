@@ -37,11 +37,11 @@ export default class Example extends React.Component {
       <div>
         <Navbar light expand="md" className="navbar-pin" style={{ padding: "17px", borderBottom: "1px solid #ded2d2", marginBottom: "9px", }}>
           <img src={imgpin} style={{ width: "38px", marginLeft: "19px" }} />
-          <Input style={{ width: "60%", marginLeft: "22px", backgroundColor: "#EFEFEF" }} />
+          <Input style={{ width: "51%", marginLeft: "22px", backgroundColor: "#EFEFEF" }} />
           <NavbarToggler onClick={this.toggle} />
           <div >
 
-            <Button className="btn-navbar" style={{ marginLeft: "64px" }}>Inicio</Button>
+            <Button className="btn-navbar" style={{ marginLeft: "30px" }}>Inicio</Button>
             <Button className="btn-navbar">Siguiendo</Button>
             <Button className="btn-navbar">Usuario</Button>
             <Button className="btn-navbar icon-navbar">
