@@ -5,10 +5,6 @@ import CircularProgress from './../CircularProgress/CircularProgress';
 import qwest from 'qwest';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
-// import Modal from '@material-ui/core/Modal';
-import Button from '@material-ui/core/Button';
-import Modal from './../../Modal/Modal';
 import ImgModal from '../../Modal/ModalBoot';
 
 const styles = theme => ({
@@ -46,10 +42,8 @@ class Ejemplo extends Component {
 		})
 			.then(function (xhr, resp) {
 				if (resp) {
-					console.log(resp)
 					var tracks = self.state.tracks;
-					resp.results.map((track) => {
-						console.log(track)
+					resp.results.map(track => {
 						tracks.push(track);
 					});
 					if (resp.next_href) {
@@ -81,7 +75,6 @@ class Ejemplo extends Component {
 
 
 	render() {
-		const { classes } = this.props;
 		const loader = <CircularProgress></CircularProgress>;
 		return (
 			<InfiniteScroll
@@ -92,9 +85,8 @@ class Ejemplo extends Component {
 				<ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
 					<Masonry>
 						{this.state.tracks.map((e, i) => (
-							<div style={{ padding: "7px" }}>
+							<div key={i} style={{ padding: "7px" }}>
 								<img
-									key={i}
 									src={e.urls.small}
 									onClick={() => {
 										this.datos(e)

@@ -102,3 +102,40 @@
 }
 }
 
+@media only screen and (max-width: 600px) {
+    .img-props {
+        width: 62% !important;
+    }
+    .modal-body{
+        display: inline-grid;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .img-props {
+        width: 62% !important;
+        margin-left: 65px !important;
+    }
+    .modal-body{
+        display: inline-grid !important;
+    }
+    #points{
+        display: none !important;
+    }
+    .p-inicio{
+        margin-top: -4px !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #points{
+        display: none !important;
+    }
+    .p-inicio{
+        margin-top: -4px !important;
+    }
+    #desktop-angle{
+        display: none !important;
+    }
+    
+}
+
+
