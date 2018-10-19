@@ -4,3 +4,6 @@ Recrea principales caracteristicas de Pinteres, Galeria de imagenes de Api Unpla
 
 ![image](https://user-images.githubusercontent.com/37908546/47219220-9e503300-d384-11e8-907d-e39121e87e7c.png)
 
+## Desarrollado para 
+[Laboratoria](http://laboratoria.la)
+
